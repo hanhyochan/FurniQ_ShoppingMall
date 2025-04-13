@@ -1,9 +1,9 @@
-import Heading from './Heading';
+import HeroText from '@/components/atoms/Text/HeroText/HeroText';
 import type { Meta, StoryObj } from '@storybook/react';
 
-const meta: Meta<typeof Heading> = {
-  title: 'Heading',
-  component: Heading,
+const meta: Meta<typeof HeroText> = {
+  title: 'HeroText',
+  component: HeroText,
   parameters: {
     layout: 'centered',
   },
@@ -12,7 +12,7 @@ const meta: Meta<typeof Heading> = {
     children: { control: 'text' },
     className: { control: 'text' },
   },
-} satisfies Meta<typeof Heading>;
+} satisfies Meta<typeof HeroText>;
 
 export default meta;
 

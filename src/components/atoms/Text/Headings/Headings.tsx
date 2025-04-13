@@ -1,14 +1,14 @@
 import React from 'react';
-import { HeadingStyleMap } from './HeadingStyleMap.style';
+import { HeadingsStyleMap } from './HeadingsStyleMap.style';
 
-interface HeadingProps {
+interface HeadingsProps {
     tag: 'heading1' | 'heading2_sb' | 'heading2_m';
     children: React.ReactNode;
     className?: string;
     }
 
-const Heading = ({ tag = 'heading1', children, className }: HeadingProps) => {
-    const Component = HeadingStyleMap[tag] || HeadingStyleMap.h1;
+const Heading = ({ tag = 'heading1', children, className }: HeadingsProps) => {
+    const Component = HeadingsStyleMap[tag] || HeadingsStyleMap.heading1;
 
     return <Component className={className}>{children}</Component>;
   };

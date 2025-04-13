@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const HeadingStyleMap = {
+export const HeadingsStyleMap = {
   heading1: styled.h1`
     font-size: 4.8rem;
     font-weight: 600;

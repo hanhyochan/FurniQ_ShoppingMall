@@ -1,11 +1,13 @@
 "use client"
 
-import HeroText from "@/components/atoms/Text/Hero/HeroText";
+import Heading from "@/components/atoms/Text/Headings/Headings";
 
 export default function Home() {
   return (
     <div>
-      <HeroText>하이</HeroText>
+      <Heading tag="heading2_sb">
+  Welcome to Our Site
+</Heading>
     </div>
   );
 }
