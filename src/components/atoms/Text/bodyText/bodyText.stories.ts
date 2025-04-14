@@ -1,9 +1,9 @@
-import bodyText from './bodyText';
+import BodyText from './bodyText';
 import type { Meta, StoryObj } from '@storybook/react';
 
-const meta: Meta<typeof bodyText> = {
-  title: 'bodyText',
-  component: bodyText,
+const meta: Meta<typeof BodyText> = {
+  title: 'BodyText',
+  component: BodyText,
   parameters: {
     layout: 'centered',
   },
@@ -12,7 +12,7 @@ const meta: Meta<typeof bodyText> = {
     children: { control: 'text' },
     className: { control: 'text' },
   },
-} satisfies Meta<typeof bodyText>;
+} satisfies Meta<typeof BodyText>;
 
 export default meta;
 
