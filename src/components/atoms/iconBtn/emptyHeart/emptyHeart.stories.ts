@@ -1,14 +1,14 @@
-import FilledHeart from './FilledHeart';
+import EmptyHeart from './EmptyHeart';
 import type { Meta, StoryObj } from '@storybook/react';
 
-const meta: Meta<typeof FilledHeart> = {
-  title: 'filledHeart',
-  component: FilledHeart,
+const meta: Meta<typeof EmptyHeart> = {
+  title: 'emptyHeart',
+  component: EmptyHeart,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof FilledHeart>;
+} satisfies Meta<typeof EmptyHeart>;
 
 export default meta;
 
