@@ -1,18 +1,11 @@
 import Image from 'next/image';
-import { css } from '@emotion/react';
+import BtnBg from '../../BtnBg';
 
 const EmptyHeart = () => {
   return (
-    <button
-      css={css`
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-      `}
-    >
-      <Image src="/icons/emptyHeart.svg" alt="emptyHeart" width={27.2} height={27.2} />
-    </button>
+    <BtnBg>
+      <Image src="/icons/emptyHeart.svg" alt="emptyHeart" width={17} height={16} />
+    </BtnBg>
   );
 };
 
