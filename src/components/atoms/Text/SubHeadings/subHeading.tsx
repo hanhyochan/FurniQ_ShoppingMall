@@ -1,13 +1,12 @@
 import React from 'react';
-import { SubHeadingText } from './subHeadingStyle';
+import subHeadingStyle from './subHeadingStyle.module.css';
 
 interface subHeadingsProps {
-    children: React.ReactNode;
-    className?: string;
-    }
+  children: React.ReactNode;
+}
 
-const subHeading = ({ children, className }: subHeadingsProps) => {
-    return <SubHeadingText className={className}>{children}</SubHeadingText>;
-  };
-  
-  export default subHeading;
+const subHeading = ({ children }: subHeadingsProps) => {
+  return <p className={subHeadingStyle.text}>{children}</p>;
+};
+
+export default subHeading;
