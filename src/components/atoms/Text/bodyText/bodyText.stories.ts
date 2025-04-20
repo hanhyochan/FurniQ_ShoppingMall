@@ -1,8 +1,8 @@
-import BodyText from './bodyText';
+import BodyText from './BodyText';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof BodyText> = {
-  title: 'BodyText',
+  title: 'bodyText',
   component: BodyText,
   parameters: {
     layout: 'centered',

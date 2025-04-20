@@ -1,4 +1,4 @@
-import CaptionText from './captionText';
+import CaptionText from './CaptionText';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof CaptionText> = {

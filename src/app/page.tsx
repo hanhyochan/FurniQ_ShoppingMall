@@ -1,11 +1,11 @@
 'use client';
 
-import Heading from '@/components/atoms/Text/Headings/Headings';
+import BlackBtn from '@/components/molecules/btn/blackBtn/introLinkArrow/BlackBtn';
 
 export default function Home() {
   return (
     <div>
-      <Heading tag="heading2_sb">Welcome to Our Site</Heading>
+      <BlackBtn>ddd</BlackBtn>
     </div>
   );
 }
