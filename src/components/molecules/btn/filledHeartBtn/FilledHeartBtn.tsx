@@ -1,7 +1,7 @@
 import filledHeartBtnStyles from './filledHeartBtnStyle.module.css';
 import Image from 'next/image';
 
-const BlackBtn = () => {
+const FilledHeartBtn = () => {
   return (
     <button className={filledHeartBtnStyles.container}>
       <Image src="/icons/filledHeart.svg" alt="filledHeart" width={37} height={34} />
@@ -9,4 +9,4 @@ const BlackBtn = () => {
   );
 };
 
-export default BlackBtn;
+export default FilledHeartBtn;

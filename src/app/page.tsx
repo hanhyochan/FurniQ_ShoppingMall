@@ -1,11 +1,11 @@
 'use client';
 
-import BlackBtn from '@/components/molecules/btn/blackBtn/introLinkArrow/BlackBtn';
+import SubTitle from '@/components/molecules/subTitle/SubTitle';
 
 export default function Home() {
   return (
     <div>
-      <BlackBtn>ddd</BlackBtn>
+      <SubTitle>BestSeller</SubTitle>
     </div>
   );
 }
