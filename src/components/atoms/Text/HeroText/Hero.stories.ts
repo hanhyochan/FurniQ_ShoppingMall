@@ -1,4 +1,4 @@
-import HeroText from '@/components/atoms/Text/HeroText/HeroText';
+import HeroText from './HeroText';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof HeroText> = {
@@ -10,7 +10,6 @@ const meta: Meta<typeof HeroText> = {
   tags: ['autodocs'],
   argTypes: {
     children: { control: 'text' },
-    className: { control: 'text' },
   },
 } satisfies Meta<typeof HeroText>;
 
