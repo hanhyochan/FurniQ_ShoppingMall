@@ -1,11 +1,11 @@
 'use client';
 
-import SubTitle from '@/components/molecules/subTitle/SubTitle';
+import Gnb from '@/components/organisms/gnb/Gnb';
 
 export default function Home() {
   return (
     <div>
-      <SubTitle>BestSeller</SubTitle>
+      <Gnb />
     </div>
   );
 }

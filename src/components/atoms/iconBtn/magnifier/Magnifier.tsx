@@ -1,10 +1,14 @@
 import Image from 'next/image';
 import BtnBg from '../../BtnBg';
 
-const magnifier = () => {
+interface MagnifierProps {
+  onClick: () => void;
+}
+
+const magnifier = ({ onClick }: MagnifierProps) => {
   return (
     <BtnBg>
-      <Image src="/icons/magnifier.svg" alt="magnifier" width={17} height={17} />
+      <Image src="/icons/magnifier.svg" alt="magnifier" width={17} height={17} onClick={onClick} />
     </BtnBg>
   );
 };

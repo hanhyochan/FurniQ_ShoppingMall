@@ -1,18 +1,17 @@
-import BlackBtn from './BlackBtn';
+import Gnb from './Gnb';
 import type { Meta, StoryObj } from '@storybook/react';
 
-const meta: Meta<typeof BlackBtn> = {
-  title: 'blackBtn',
-  component: BlackBtn,
+const meta: Meta<typeof Gnb> = {
+  title: 'gnb',
+  component: Gnb,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof BlackBtn>;
+} satisfies Meta<typeof Gnb>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
-// 찜 버튼 컴포넌트 만드셈..

@@ -3,10 +3,15 @@ import heroTextStyles from './heroTextStyle.module.css';
 
 interface HeroTextProps {
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
-const HeroText = ({ children }: HeroTextProps) => {
-  return <p className={heroTextStyles.text}>{children}</p>;
+const HeroText = ({ children, onClick }: HeroTextProps) => {
+  return (
+    <p className={heroTextStyles.text} onClick={onClick}>
+      {children}
+    </p>
+  );
 };
 
 export default HeroText;
