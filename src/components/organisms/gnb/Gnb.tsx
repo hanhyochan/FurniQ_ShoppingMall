@@ -13,17 +13,29 @@ const Gnb = () => {
   // 비선택 메인메뉴 회색처리
   const [selectedMainMenu, setSelectedMainMenu] = useState<string | null>(null);
 
-  const handleMainMenuClick = (mainItem: { id: string }) => {
-    setSelectedMainMenu(mainItem.id);
+  const shouldCloseMenu = (id: string): boolean => {
+    return isSubMenuOpen && selectedMainMenu === id;
+  };
 
-    const subMenuList = subMenuItems.find(item => item.id === mainItem.id);
-
+  const setUpSubMenu = (mainMenuId: string) => {
+    const subMenuList = subMenuItems.find(item => item.id === mainMenuId);
     if (subMenuList) {
-      setSubMenu(subMenuList ?? null);
+      setSubMenu(subMenuList);
       setIsSubMenuOpen(true);
     } else {
+      setSubMenu(null);
       setIsSubMenuOpen(false);
     }
+  };
+
+  const handleMainMenuClick = (mainItem: { id: string }) => {
+    if (shouldCloseMenu(mainItem.id)) {
+      setIsSubMenuOpen(false);
+      setSelectedMainMenu(null);
+      return;
+    }
+    setSelectedMainMenu(mainItem.id);
+    setUpSubMenu(mainItem.id);
   };
 
   return (
