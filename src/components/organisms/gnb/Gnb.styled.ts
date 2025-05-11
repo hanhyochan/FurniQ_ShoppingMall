@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
-import media from '@/styles/utils/media';
+import { media } from '@/styles/utils/media';
 
 export const Container = styled.div`
   width: 100vw;
-  height: 12.4rem;
+  height: 100%;
   background: #ffffff;
   padding: 0 12rem;
-  border-bottom: 1px solid #333333;
+  border-bottom: 2px solid #333333;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,10 +15,10 @@ export const Container = styled.div`
     padding: 0 4rem;
   `}
 
-  // 로고와 로그인 버튼 컨테이너
-  .headerWrapper {
+  // 로고 컨테이너
+  .headerContainer {
     width: 100%;
-    height: 50%;
+    height: 6.2rem;
     display: flex;
     align-items: center;
 
@@ -34,27 +34,31 @@ export const Container = styled.div`
     }
   }
 
-  // 카테고리 부분 컨테이너
-  .categoryWrapper {
+  // 카테고리 컨테이너
+  .categoryContainer {
     width: 100%;
-    height: 50%;
+    min-height: 6.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 1.5rem;
+
+    ${media.tablet`
+        padding-top: 1.5rem;
+        align-items: flex-end;
+  `}
 
     .mainMenuContainer {
-      width: 82%;
+      width: 75%;
       display: flex;
       justify-content: center;
-
-      ${media.tablet`
-            width: 82%;
-  `}
 
       .mainMenuWrapper {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        column-gap: 6rem;
+        row-gap: 0.7rem;
 
         .mainMenu {
           cursor: pointer;
@@ -62,18 +66,29 @@ export const Container = styled.div`
       }
     }
 
-    .HeaderIconsWrapper {
+    .HeaderIconsContainer {
       width: 14rem;
       display: flex;
       justify-content: space-between;
 
       ${media.tablet`
-            width: 11rem;
+        padding-bottom: 0.5rem;
   `}
 
       .HeaderIcons {
         cursor: pointer;
       }
     }
+  }
+
+  // 카테고리 컨테이너
+  .subMenuContainer {
+    border-top: 0.5px solid #333333;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    column-gap: 5rem;
+    row-gap: 0.7rem;
+    flex-wrap: wrap;
   }
 `;

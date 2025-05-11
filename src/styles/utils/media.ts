@@ -1,12 +1,10 @@
-// src/styles/media.ts
+// media.ts
 import breakpoints from '@/constants/breakpoints';
 
-const media = {
+export const media = {
   tablet: (styles: TemplateStringsArray) => `
-    @media (max-width: ${breakpoints.tabletMax}) and (min-width: ${breakpoints.tabletMin}) {
+    @media (max-width: ${breakpoints.smDesktopMax}) and (min-width: ${breakpoints.tabletMin}) {
       ${styles}
     }
   `,
 };
-
-export default media;

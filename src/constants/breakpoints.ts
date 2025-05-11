@@ -1,5 +1,7 @@
 const breakpoints = {
-  tabletMax: '1180px',
+  smDesktopMax: '1180px',
+  smDesktopMin: '1025px',
+  tabletMax: '1024px',
   tabletMin: '768px',
 };
 
