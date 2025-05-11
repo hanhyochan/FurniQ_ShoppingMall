@@ -13,10 +13,12 @@ const Gnb = () => {
   // 비선택 메인메뉴 회색처리
   const [selectedMainMenu, setSelectedMainMenu] = useState<string | null>(null);
 
+  // 메인메뉴 두번 클릭 시 닫기
   const shouldCloseMenu = (id: string): boolean => {
     return isSubMenuOpen && selectedMainMenu === id;
   };
 
+  // 서브메뉴 있으면 띄우기
   const setUpSubMenu = (mainMenuId: string) => {
     const subMenuList = subMenuItems.find(item => item.id === mainMenuId);
     if (subMenuList) {
@@ -28,6 +30,7 @@ const Gnb = () => {
     }
   };
 
+  // 메인메뉴 클릭 시
   const handleMainMenuClick = (mainItem: { id: string }) => {
     if (shouldCloseMenu(mainItem.id)) {
       setIsSubMenuOpen(false);

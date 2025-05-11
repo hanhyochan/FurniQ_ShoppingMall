@@ -2,8 +2,12 @@ import styled from '@emotion/styled';
 import { media } from '@/styles/utils/media';
 
 export const Container = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   width: 100vw;
-  height: 100%;
+  min-height: 12.4rem;
   background: #ffffff;
   padding: 0 12rem;
   border-bottom: 2px solid #333333;
