@@ -6,14 +6,24 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const Gnb = () => {
+  // 서브메뉴 데이터
   const [subMenu, setSubMenu] = useState<{ id: string; menu: string[] } | null>(null);
+  // 서브메뉴 렌더링 여부
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  // 비선택 메인메뉴 회색처리
+  const [selectedMainMenu, setSelectedMainMenu] = useState<string | null>(null);
 
-  const toggleSubMenu = (id: string) => {
-    const subMenuList = subMenuItems.find(item => item.id === id);
-    setSubMenu(subMenuList ?? null);
-    setIsSubMenuOpen();
-    // 서브메뉴 토글 고민
+  const handleMainMenuClick = (mainItem: { id: string }) => {
+    setSelectedMainMenu(mainItem.id);
+
+    const subMenuList = subMenuItems.find(item => item.id === mainItem.id);
+
+    if (subMenuList) {
+      setSubMenu(subMenuList ?? null);
+      setIsSubMenuOpen(true);
+    } else {
+      setIsSubMenuOpen(false);
+    }
   };
 
   return (
@@ -33,9 +43,13 @@ const Gnb = () => {
           <div className="mainMenuWrapper">
             {mainMenu.map(mainItem => (
               <BodyText
-                tag="body1"
+                tag={
+                  selectedMainMenu === null || selectedMainMenu === mainItem.id
+                    ? 'body1'
+                    : 'body1_gray'
+                }
                 className="mainMenu"
-                onClick={() => toggleSubMenu(mainItem.id)}
+                onClick={() => handleMainMenuClick(mainItem)}
                 key={mainItem.id}
               >
                 {mainItem.name}
@@ -57,18 +71,20 @@ const Gnb = () => {
         </div>
       </div>
       {/* 서브메뉴 컨테이너 */}
-      <div className="subMenuContainer">
-        {subMenu?.menu.map((subItem, index) => (
-          <BodyText
-            tag="body2"
-            key={subItem + index}
-            onClick={() => console.log(`/${subMenu.id}/${subItem}`)}
-            className="subMenu"
-          >
-            {subItem}
-          </BodyText>
-        ))}
-      </div>
+      {isSubMenuOpen && subMenu && (
+        <div className="subMenuContainer">
+          {subMenu?.menu.map((subItem, index) => (
+            <BodyText
+              tag="body2"
+              key={subItem + index}
+              onClick={() => console.log(`/${subMenu.id}/${subItem}`)}
+              className="subMenu"
+            >
+              {subItem}
+            </BodyText>
+          ))}
+        </div>
+      )}
     </Container>
   );
 };

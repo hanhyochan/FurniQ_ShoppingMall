@@ -90,5 +90,9 @@ export const Container = styled.div`
     column-gap: 5rem;
     row-gap: 0.7rem;
     flex-wrap: wrap;
+
+    .subMenu {
+      cursor: pointer;
+    }
   }
 `;
