@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react';
 import useUiStore from '@/store/useUiStore';
 
 const useWindowWidth = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== 'undefined' ? window.innerWidth : 0,
+  );
   const setZustandWindowWidth = useUiStore(state => state.setWindowWidth);
 
   useEffect(() => {

@@ -10,6 +10,7 @@ const Footer = () => {
   const [showToast, setShowToast] = useState(false);
   const windowWidth = useWindowWidth();
 
+  // 이걸로 후딱 푸터 반응형 만들기
   console.log(windowWidth);
 
   const handleCopy = (text: string) => {

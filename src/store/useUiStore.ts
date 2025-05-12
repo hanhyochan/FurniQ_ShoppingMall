@@ -8,7 +8,7 @@ type UiStoreProps = {
 
 const useUiStore = create<UiStoreProps>(set => ({
   // 화면 너비 감지
-  windowWidth: window.innerWidth,
+  windowWidth: typeof window !== 'undefined' ? window.innerWidth : 0, // 서버 환경에서는 0으로 초기화
   setWindowWidth: (width: number) => set({ windowWidth: width }),
 }));
 
