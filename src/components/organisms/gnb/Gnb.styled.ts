@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { media } from '@/styles/utils/media';
 
 export const Container = styled.div`
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 1000;
