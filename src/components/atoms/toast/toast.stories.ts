@@ -1,18 +1,14 @@
-import BodyText from './BodyText';
+import Toast from './Toast';
 import type { Meta, StoryObj } from '@storybook/react';
 
-const meta: Meta<typeof BodyText> = {
-  title: 'bodyText',
-  component: BodyText,
+const meta: Meta<typeof Toast> = {
+  title: 'toast',
+  component: Toast,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {
-    children: { control: 'text' },
-    className: { control: 'text' },
-  },
-} satisfies Meta<typeof BodyText>;
+} satisfies Meta<typeof Toast>;
 
 export default meta;
 

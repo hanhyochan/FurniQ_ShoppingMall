@@ -15,7 +15,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  ${media.tablet`
+  ${media.breakPoint_1`
     padding: 0 4rem;
   `}
 
@@ -47,7 +47,7 @@ export const Container = styled.div`
     justify-content: space-between;
     padding-bottom: 1.5rem;
 
-    ${media.tablet`
+    ${media.breakPoint_1`
         padding-top: 1.5rem;
         align-items: flex-end;
   `}
@@ -75,7 +75,7 @@ export const Container = styled.div`
       display: flex;
       justify-content: space-between;
 
-      ${media.tablet`
+      ${media.breakPoint_1`
         padding-bottom: 0.5rem;
   `}
 

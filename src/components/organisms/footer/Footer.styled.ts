@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding: 5.6rem 12rem;
   display: flex;
 
-  ${media.tablet`
+  ${media.breakPoint_1`
       padding: 5.6rem 4rem;
     `}
 
@@ -22,7 +22,7 @@ export const Container = styled.div`
   .infoContainer {
     width: 60%;
     display: flex;
-    gap: 6rem;
+    gap: clamp(1rem, 5vw, 6rem);
 
     .bodyText {
       line-height: 3rem;
