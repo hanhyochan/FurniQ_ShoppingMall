@@ -6,4 +6,9 @@ export const media = {
       ${styles}
     }
   `,
+  breakPoint_2: (styles: TemplateStringsArray) => `
+    @media (max-width: ${breakpoints.smDesktopMax}) and (min-width: ${breakpoints.tabletMid}) {
+      ${styles}
+    }
+  `,
 };

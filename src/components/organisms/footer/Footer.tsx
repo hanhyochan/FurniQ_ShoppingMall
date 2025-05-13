@@ -4,14 +4,9 @@ import Heading from '@/components/atoms/text/Headings/Headings';
 import HeroText from '@/components/atoms/text/HeroText/HeroText';
 import BodyText from '@/components/atoms/text/bodyText/BodyText';
 import Toast from '@/components/atoms/toast/Toast';
-import useWindowWidth from '@/hooks/useWindowWidth';
 
 const Footer = () => {
   const [showToast, setShowToast] = useState(false);
-  const windowWidth = useWindowWidth();
-
-  // 이걸로 후딱 푸터 반응형 만들기
-  console.log(windowWidth);
 
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -25,7 +20,9 @@ const Footer = () => {
         <Heading tag="heading2_m" className="subTitle">
           Unique Interior
         </Heading>
-        <HeroText onClick={() => alert('함수')}>FurniQ</HeroText>
+        <HeroText onClick={() => alert('함수')} className="heroText">
+          FurniQ
+        </HeroText>
       </div>
       <div className="infoContainer">
         {/* 정보 1 */}
@@ -54,14 +51,14 @@ const Footer = () => {
               <BodyText
                 tag="body2_r"
                 onClick={() => handleCopy('010-2760-4606')}
-                className="bodyText"
+                className="bodyTextCursorPointer"
               >
                 Mobile: 010-2760-4606
               </BodyText>
               <BodyText
                 tag="body2_r"
                 onClick={() => handleCopy('hcartist569@gmail.com')}
-                className="bodyText"
+                className="bodyTextCursorPointer"
               >
                 E-Mail: hcartist569@gmail.com
               </BodyText>

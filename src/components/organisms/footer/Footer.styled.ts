@@ -9,7 +9,12 @@ export const Container = styled.div`
   display: flex;
 
   ${media.breakPoint_1`
-      padding: 5.6rem 4rem;
+      padding: 2rem 4rem;
+    flex-direction: column;
+
+      .subTitle {
+      display: none;
+      }
     `}
 
   .logoContainer {
@@ -17,6 +22,10 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    .heroText {
+      cursor: pointer;
+    }
   }
 
   .infoContainer {
@@ -24,8 +33,28 @@ export const Container = styled.div`
     display: flex;
     gap: clamp(1rem, 5vw, 6rem);
 
+    ${media.breakPoint_1`
+      width: 68rem;
+      margin-top: 1.5rem;
+      justify-content: space-between;
+      gap: 2rem;
+    `}
+
     .bodyText {
       line-height: 3rem;
+
+      ${media.breakPoint_1`
+      line-height: 2.5rem;
+    `}
+    }
+
+    .bodyTextCursorPointer {
+      line-height: 3rem;
+      cursor: pointer;
+
+      ${media.breakPoint_1`
+      line-height: 2.5rem;
+    `}
     }
 
     .infoItems {
@@ -37,6 +66,10 @@ export const Container = styled.div`
     .ContactUsWrapper {
       display: flex;
       align-items: flex-end;
+
+      ${media.breakPoint_1`
+      align-items: flex-start;
+    `}
     }
   }
 `;
