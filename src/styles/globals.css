@@ -45,4 +45,6 @@ body {
   font-size: 1.6rem;
   font-family: 'Poppins-Regular', sans-serif;
   color: #333333;
+  min-height: 100vh;
+  flex-direction: column;
 }
